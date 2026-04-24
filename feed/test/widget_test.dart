@@ -1,22 +1,17 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:feed/main.dart';
+import '../lib/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('FeedApp smoke test - renders without crashing',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const ProviderScope(child: FeedApp()),
+    );
 
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify the app widget tree is present
+    expect(find.byType(MaterialApp), findsOneWidget);
   });
 }
