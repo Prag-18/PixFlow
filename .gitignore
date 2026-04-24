@@ -108,3 +108,24 @@ dmypy.json
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Flutter / Dart
+# Credentials & sensitive config — NEVER commit these
+**/lib/app_config.dart
+**/*.env
+**/google-services.json
+**/GoogleService-Info.plist
+
+# Flutter build artifacts
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/pubspec.lock
+
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/android/key.properties
+**/android/*.keystore
+**/android/*.jks
