@@ -1,0 +1,36 @@
+name: PixFlow
+description: High-Performance Infinite-Scrolling Social Feed
+publish_to: 'none'
+version: 1.0.0+1
+ 
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+ 
+dependencies:
+  flutter:
+    sdk: flutter
+ 
+  # State management
+  flutter_riverpod: ^2.5.1
+ 
+  # Supabase backend
+  supabase_flutter: ^2.5.1
+ 
+  # Image loading with cache control
+  cached_network_image: ^3.3.1
+ 
+  # Shimmer skeleton loader
+  shimmer: ^3.0.0
+  flutter_blurhash: ^0.9.1
+  octo_image: ^2.1.0
+  image_picker: ^1.2.1
+  image: ^4.8.0
+  path_provider: ^2.1.5
+ 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+ 
+flutter:
+  uses-material-design: true
